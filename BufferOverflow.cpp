@@ -36,13 +36,16 @@ void demoBufferOverflowData() {
 	printf("login as: ");
 	fflush(stdout);
 	//gets(userName); // use scanf("%s", userName); if gets fails with identifier not found
-	scanf("%s", userName);
+	//scanf("%s", userName);
+	std::cin >> userName;
 
 	// Get password
 	printf("%s@vulnerable.machine.com: ", userName);
 	fflush(stdout);
 	//gets(passwd);  
-	scanf("%s", passwd); // use scanf("%s", passwd); if gets fails with identifier not found
+	//scanf("%s", passwd); // use scanf("%s", passwd); if gets fails with identifier not found
+	std::cin >> passwd;
+
 
 	// Check user rights (set to NORMAL_USER and not changed in code)
 	if (userRights == NORMAL_USER) {
